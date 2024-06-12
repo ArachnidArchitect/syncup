@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+/* navbar */
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    nav{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.80);
+        justify-content: space-between;
+        position: sticky;
+    }
+    #navLinks{
+        width: 27%;
+        min-width: 350px;
+        align-items: center;
+
+    }
+    #navLinks ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    text-align: center;
+    }
+    #navLinks ul li{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    #navLinks ul li a{
+    text-decoration: none;
+    color: #CDCCCC;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+
+    #navLinks ul li:hover{
+        background-color: white;
+    }
+#navAccList{
+    position: absolute;
+    padding: 2em;
+    width: 12em;
+    height: 10em;
+    right: 0;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2em;
+    color: #CDCCCC;
+    
+}
+#navAccList li{
+    list-style: none;
+    padding: .5em;
+}
+#navAccList :nth-child(2) {
+    border-top: 2px rgba(0, 0, 0, 0.605) solid;
+    border-bottom: 2px rgba(0, 0, 0, 0.605) solid;
+}
+
+
+/* landing page */
+#landing{
+    height: 100vh;
+    background-image: url('../IMAGES/landingBg.jpg');
+    background-size: 100%;
+    background-position-x: 80%;
+
+}
+.rad-shadow{
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 77%);
+}
+    /* the cards */
+    .landingContainer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .cardContainer{
+        width: 45%;
+        padding: 2em;
+    }
+.landingCardTemplate{
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.47) 50%, rgba(255, 255, 255, 0.800) 70%);
+    margin: 0 auto;
+    width: 60%;
+    height: 30em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 1em 1em;
+    box-shadow: 0 4px 54px rgba(0, 0, 0, 0.25);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+}
+.LCTcard1{
+    display: none;
+}
+.LCTcard2{
+    display: none;
+}
+.LCTRow1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.tester{
+    display: flex;
+    /* width: 5%; */
+    
+}
+
+h1.stoked{
+margin-left: -50px;
+margin-right: -50px;
+    transform: rotate(90deg);
+    /* height: 33px; */
+    flex-basis:33px ;
+    color: white;
+    font-size: 6ch;
+    text-shadow: 0 4px 11px rgba(0, 0, 0, 0.448);
+    
+}
+.LCTRow2{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0 1em 0;
+}
+.LCTRow3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.LCTbtn{
+    margin: 0 auto;
+    width:50%;
+    min-width: 160px;
+    font-weight: 600;
+    font-size: 2ch;
+    padding:.5em;
+    border-radius: 5px;
+    border: none;
+    background-color:#4BCAD4 ;
+    color: white;
+}
+
+    .landingTitle{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .landingBrowse{
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        text-transform: uppercase;
+        
+    }
+    .landingBrowseTemplate{
+        padding: 2em;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.641) 20%,rgba(0, 0, 0, 0.022) 100%);
+
+    }
+    .galleryCard{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .galleryCard img{
+        width: 90%;
+    }
+
+/* products section styling */
+#products{
+    height: 100vh;
+    display: flex;
+}
+.offscreen-filter{
+    width: 3em;
+    height: 3em;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 15em;
+    background-color: #82d496;
+}
+#prodFilter{
+    width: 0%;
+    background-color: #82d49658;
+    height: 100%;
+    /* display: none; */
+
+}
+
+.filter-row{
+    display: flex;
+    flex-direction: row;
+    }
+
+.FRow1{
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 90%;
+    margin: 0 auto ;
+
+    justify-content: space-around;
+}
+ i{
+padding: 1em;
+ }
+
+ .filter-form{
+    padding-left: 2em;
+ }
+ .filter-form form button{
+    padding: 1em;
+    border: none;
+    background-color: #82d496 ;
+    margin: 10px;
+    width: 100%;
+ }
+.grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+    background-color: black;
+    padding: 1em;
+    gap:1em;
+    border: 1px white solid;
+    color: #A6A3A3;
+}
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.gridRow1,.gridRow3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.gridRow1 img{
+    width: 11em;
+}
+.gridRow2{
+    margin: 0 auto;
+    padding-left:1em ;
+
+}
+.grid-btns{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+}
+
+.grid-btns button{
+border: 1px solid white;
+color: white;
+font-weight: 600;
+ background-color: #0012FF;
+ padding: 1em;
+}
+.grid-btn-vm{
+    width: 30%;
+}
+.grid-btn-atc{
+    flex-basis: 1;
+}
+
+
+
+/* hover for nav */
+.navEnd img:hover #navAccList{
+display: none;
+}
+/* hover for product */
+.FRow1 i:hover{
+    background-color: #82d49652;
+    border-radius: 100%;
+}
+.FRow1 i:active{
+    background-color: #82d496ab;
+    border-radius: 100%;
+}
+
+
+
+
+
+/* borders for my grid */
+.grid-item::before {
+    inline-size: var(--line-thickness);
+    block-size: 100vh;
+    inset-block-start: 0;
+    inset-inline-start: calc(var(--line-offset) * -1);
+  }
+
+
+
+
+
+
+    /* card animations */
+    @keyframes disappear {
+        from {transform: translateX(0px); opacity:100%; }
+        to {transform:translateX(100px);
+            opacity: 0;}
+      }
+    @keyframes appear {
+        from {transform: translateX(-100px); opacity: 0;}
+        to {transform:translateX(0px); opacity:100%; }
+      }
